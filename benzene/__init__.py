@@ -3,7 +3,7 @@
 from flask import Flask
 from flaskext.sqlalchemy import SQLAlchemy
 
-from benzene.modules.userbase import userbase
+from benzene.modules import top_level, userbase
 
 app = Flask(__name__)
 
@@ -15,6 +15,6 @@ except RuntimeError:
 
 db = SQLAlchemy(app)
 
-import benzene.top_level_views
-app.register_module(userbase, url_prefix='/userbase')
+app.register_module(top_level.top_level)
+app.register_module(userbase.userbase, url_prefix='/userbase')
 

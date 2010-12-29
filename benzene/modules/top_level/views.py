@@ -4,17 +4,16 @@
 
 from flask import render_template
 
-from benzene import app
-from benzene import top_level_forms as forms
+from benzene.modules.top_level import top_level as top
 
-@app.route('/')
+@top.route('/')
 def home():
-    return render_template('visitor_home.html')
+    return render_template('top_level/visitor_home.html')
 
-@app.route('/register')
+@top.route('/register')
 def register():
     return 'This will be registration page'
 
-@app.route('/login')
+@top.route('/login')
 def login():
     return 'This will be login page'
