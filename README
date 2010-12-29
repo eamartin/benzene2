@@ -1,2 +1,5 @@
-There will be more here later.
-This file was modified by PyCharm 1.1 for binding GitHub repository
+This project currently depends on:
+Python 2.7 (probably works with 2.5 or newer)
+Flask .6
+Flask-SQLAlchemy
+Flask-WTF

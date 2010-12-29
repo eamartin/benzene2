@@ -8,6 +8,7 @@ from benzene.modules.top_level import top_level as top
 
 @top.route('/')
 def home():
+    '''Should be static or at least cached'''
     return render_template('top_level/visitor_home.html')
 
 @top.route('/register')

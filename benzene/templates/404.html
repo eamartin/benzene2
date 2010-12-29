@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block title %}Page Not Found{% endblock %}
+{% block content%}
+    <h1>Sorry, this page could not be found.</h1>
+    <a href="{{ url_for('top_level.home') }}">Let's go home!</a>
+{% endblock %}
+

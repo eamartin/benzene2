@@ -15,6 +15,7 @@ except RuntimeError:
 
 db = SQLAlchemy(app)
 
+import error_handlers
 app.register_module(top_level.top_level)
 app.register_module(userbase.userbase, url_prefix='/userbase')
 
