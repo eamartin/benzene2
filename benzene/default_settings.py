@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#test
+#testz
 SERVER_NAME = 'localhost'
 DEBUG = True
 TESTING = True
