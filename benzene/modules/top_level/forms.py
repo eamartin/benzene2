@@ -16,4 +16,4 @@ class LoginForm(Form):
             raise ValidatonError('Incorrect password')
 
 class RegistrationForm(Form):
-
+    pass

@@ -4,21 +4,21 @@
 
 from flask import redirect, render_template, request, session, url_for
 
-from benzene.modules.top_level import top_level as top
+from benzene import app, db
 
 from forms import LoginForm
 from models import User
 
-@top.route('/')
+@app.route('/')
 def home():
     '''Should be static or at least cached'''
     return render_template('top_level/visitor_home.html')
 
-@top.route('/register')
+@app.route('/register')
 def register():
     return 'This will be registration page'
 
-@top.route('/login', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm(request.form)
     if request.method == 'POST' and form.validate():
@@ -26,7 +26,7 @@ def login():
         return redirect(url_for('home'))
     return render_template('top_level/login.html', form=LoginForm())
 
-@top.route('/logout')
+@app.route('/logout')
 def logout():
     if 'user' in session:
         del session['user']
